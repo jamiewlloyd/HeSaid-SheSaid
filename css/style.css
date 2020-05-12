@@ -1,0 +1,125 @@
+#wrapper {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:auto;
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 4rem;
+    padding: 0 10px 0 10px;
+    margin:0 0 20px 0;
+}
+
+.hetitle {
+    color: #4154ff;
+}
+
+.shetitle {
+    color: #e635c8;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 40%;
+    align-items: center;
+    justify-items: center;
+    margin: 20px 0 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input>label {
+    grid-column: 1;
+    text-align: right;
+    margin-right: 10px;
+    width: 150px;
+}
+
+.input>input {
+    grid-column: 2;
+    width: 250px;
+    border-radius: 0.25rem;
+    padding: 2px;
+    font-family: sans-serif;
+}
+
+.input>button {
+    grid-column: 3;
+    width: 70px;
+    margin-left: 20px;
+    border: 0;
+    border-radius: 0.25rem;
+    background: #0cb466;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 2.5px 0 2.5px 0;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input>button:hover {
+    background: #11cc75;
+}
+
+.hide {
+    display:none;
+}
+
+#generator {
+    width: 300px;
+    border: 0;
+    border-radius: 0.25rem;
+    background: #0cb466;
+    color: white;
+    font-size: 3rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 5px 0 5px 0;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    margin-top:100px;
+}
+
+#generator:hover {
+    background: #11cc75;
+}
+
+#story { 
+    width: 40%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+#reset {
+    width: 300px;
+    border: 0;
+    border-radius: 0.25rem;
+    background: #992121;
+    color: white;
+    font-size: 3rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 5px 0 5px 0;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    margin-top:50px;
+}
+
+#reset:hover {
+    background: #c72d2d;
+}
