@@ -1,8 +1,13 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
 #wrapper {
     display: grid;
     align-items: center;
     justify-items: center;
-    
 }
 
 header {
@@ -16,6 +21,7 @@ h1 {
     font-size: 4rem;
     padding: 0 10px 0 10px;
     margin:0 0 20px 0;
+    text-align: center;
 }
 
 .hetitle {
@@ -122,4 +128,52 @@ h1 {
 
 #reset:hover {
     background: #c72d2d;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-family: 'Bangers', cursive;
+        font-size: 3.2rem;
+        margin:0 0 20px 0;
+        text-align: center;
+    }
+    .input {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        width: 40%;
+        align-items: center;
+        justify-items: center;
+        margin: 20px 0 0 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    .input>label {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+        margin: 5px 0px;
+    }
+    
+    .input>input {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 5px 0px;
+    }
+    
+    .input>button {
+        grid-column: 1;
+        grid-row: 3;
+       margin: 10px 0px;
+    }
+    .hide {
+        display:none;
+    }
+
+    #story { 
+        width: 80%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-top: 50px;
+        text-align: justify;
+    }
 }
