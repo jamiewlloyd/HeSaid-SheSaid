@@ -25,9 +25,10 @@ const resetBtn = document.getElementById("reset");
 let count = 0;
 
 const processInput = (event) => {
-    let inputValue = event.path[1].childNodes[3].value;
+    let input = event.srcElement.previousElementSibling;
+    let inputValue = input.value;
     if (inputValue.length > 0) {
-        event.path[1].classList.add("hide");
+        input.parentElement.classList.add("hide");
         count++;
     }
     generateButton();
