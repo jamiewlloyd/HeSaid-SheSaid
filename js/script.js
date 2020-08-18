@@ -10,15 +10,6 @@ let sheSaidInput = document.getElementById("sheSaid");
 let onlookersInput = document.getElementById("onlookers");
 let tomorrowInput = document.getElementById("tomorrow");
 
-const heBtn = document.getElementById("heBtn");
-const sheBtn = document.getElementById("sheBtn");
-const lnHeBtn = document.getElementById("lnHeBtn");
-const lnSheBtn = document.getElementById("lnSheBtn");
-const theyBtn = document.getElementById("theyBtn");
-const heSaidBtn = document.getElementById("heSaidBtn");
-const sheSaidBtn = document.getElementById("sheSaidBtn");
-const onlookersBtn = document.getElementById("onlookersBtn");
-const tomorrowBtn = document.getElementById("tomorrowBtn");
 const generateBtn = document.getElementById("generator");
 const resetBtn = document.getElementById("reset");
 
