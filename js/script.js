@@ -62,14 +62,9 @@ const pageReset = () => {
 
 }
 
-heBtn.addEventListener("click", processInput);
-sheBtn.addEventListener("click", processInput);
-lnHeBtn.addEventListener("click", processInput);
-lnSheBtn.addEventListener("click", processInput);
-theyBtn.addEventListener("click", processInput);
-heSaidBtn.addEventListener("click", processInput);
-sheSaidBtn.addEventListener("click", processInput);
-onlookersBtn.addEventListener("click", processInput);
-tomorrowBtn.addEventListener("click", processInput);
+document.querySelectorAll('.button').forEach(item => {
+    item.addEventListener('click', processInput);
+})
+
 generateBtn.addEventListener("click", generateStory);
 resetBtn.addEventListener("click", pageReset);
