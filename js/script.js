@@ -24,8 +24,8 @@ const resetBtn = document.getElementById("reset");
 
 let count = 0;
 
-const processInput = (event) => {
-    let input = event.srcElement.previousElementSibling;
+const processInput = (e) => {
+    let input = e.srcElement.previousElementSibling;
     let inputValue = input.value;
     if (inputValue.length > 0) {
         input.parentElement.classList.add("hide");
@@ -62,9 +62,19 @@ const pageReset = () => {
 
 }
 
+const enterSubmit = (e) => {
+    if (e.keyCode == 13) {
+        e.srcElement.nextElementSibling.click();
+    }
+}
+
 document.querySelectorAll('.button').forEach(item => {
     item.addEventListener('click', processInput);
 })
 
 generateBtn.addEventListener("click", generateStory);
 resetBtn.addEventListener("click", pageReset);
+
+document.querySelectorAll('input').forEach(item => {
+    item.addEventListener('keypress', enterSubmit);
+})
