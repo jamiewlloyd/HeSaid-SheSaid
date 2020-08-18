@@ -37,6 +37,7 @@ const processInput = (e) => {
 const generateButton = () => {
     if (count === NUMBER_OF_BUTTONS) {
         generateBtn.classList.toggle("hide");
+        count = 0;
     }
 };
 
