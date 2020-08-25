@@ -20,7 +20,12 @@ const processInput = (e) => {
     let inputValue = input.value;
     if (inputValue.length > 0) {
         input.parentElement.classList.add("hide");
-        count++;
+        if (input.parentElement.classList.contains('last')) {
+            count++;
+        } else {
+            input.parentElement.nextElementSibling.childNodes[3].focus();
+            count++;
+        }
     }
     generateButton();
 };
@@ -42,6 +47,12 @@ const generateStory = () => {
     resetBtn.classList.toggle("hide");
 }
 
+const entergenerateStory = (e) => {
+    if (!generateBtn.classList.contains('hide') && e.keyCode === 13) {
+        generateStory();
+    }
+}
+
 const pageReset = () => {
     let children = document.getElementById("inputs").children;
     document.getElementById("story").classList.toggle("hide");
@@ -55,7 +66,7 @@ const pageReset = () => {
 }
 
 const enterSubmit = (e) => {
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
         e.srcElement.nextElementSibling.click();
     }
 }
@@ -65,6 +76,7 @@ document.querySelectorAll('.button').forEach(item => {
 })
 
 generateBtn.addEventListener("click", generateStory);
+document.addEventListener("keydown", entergenerateStory);
 resetBtn.addEventListener("click", pageReset);
 
 document.querySelectorAll('input').forEach(item => {
