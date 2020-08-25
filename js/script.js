@@ -15,6 +15,10 @@ const resetBtn = document.getElementById("reset");
 
 let count = 0;
 
+document.addEventListener("DOMContentLoaded", function () {
+    heInput.focus();
+});
+
 const processInput = (e) => {
     let input = e.srcElement.previousElementSibling;
     let inputValue = input.value;
